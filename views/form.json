@@ -1,0 +1,1658 @@
+[
+    {
+        "xtype": "tabpanel",
+        "activeTab": 0,
+        "ui": "flat-light",
+        "anchor": "100% 100%",
+        "autoRender": true,
+        "items": [
+            {
+                "title": "#Attributes",
+                "tooltip": "Material type attributes",
+                "iconCls": "g-icon-svg g-icon-svg_size_16 g-icon-m_color_tab rg-references-articles__icon-attributes",
+                "bodyPadding": "10",
+                "autoScroll": true,
+                "layout": "anchor",
+                "defaults": {
+                    "labelWidth": 150,
+                    "labelAlign": "right"
+                },
+                "items": [
+                    {
+                        "xtype": "textfield",
+                        "anchor": "100%",
+                        "maxLength": 100,
+                        "fieldLabel": "#Name",
+                        "name": "name",
+                        "allowBlank": false
+                    },
+                    {
+                        "xtype": "textfield",
+                        "anchor": "100%",
+                        "maxLength": 100,
+                        "fieldLabel": "#Description",
+                        "name": "description",
+                        "allowBlank": false
+                    },
+                    {
+                        "xtype": "textfield",
+                        "anchor": "100%",
+                        "maxLength": 100,
+                        "fieldLabel": "#Icon",
+                        "name": "icon",
+                        "allowBlank": true
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#All articles",
+                        "boxLabel": "#if installed, all material records will be displayed regardless of their type",
+                        "checked": false,
+                        "name": "all",
+                        "inputValue": 1
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Enabled",
+                        "checked": true,
+                        "name": "enabled",
+                        "inputValue": 1
+                    }
+                ]
+            },
+            {
+                "title": "#Grid Interface",
+                "iconCls": "g-icon-svg g-icon-svg_size_16 g-icon-m_color_tab rg-references-articles__icon-grid",
+                "bodyPadding": "10",
+                "autoScroll": true,
+                "layout": "anchor",
+                "defaults": {
+                    "labelWidth": 150,
+                    "labelAlign": "right"
+                },
+                "items": [
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Column \"Date of publication\"",
+                        "cls": "rg-references-articles__fieldset-col",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 100,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[publishDate][text]",
+                                "fieldLabel": "#Name",
+                                "tooltip": "#Column name",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[publishDate][tooltip]",
+                                "fieldLabel": "#Tootlip",
+                                "tooltip": "#Column tooltip",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Show",
+                                "checked": true,
+                                "name": "columns[publishDate][visible]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Sortable",
+                                "checked": true,
+                                "name": "columns[publishDate][sortable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Filterable",
+                                "checked": true,
+                                "name": "columns[publishDate][filterable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Enabled",
+                                "checked": true,
+                                "name": "columns[publishDate][enabled]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Column \"Index number\"",
+                        "cls": "rg-references-articles__fieldset-col",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 100,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[index][text]",
+                                "fieldLabel": "#Name",
+                                "tooltip": "#Column name",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[index][tooltip]",
+                                "fieldLabel": "#Tootlip",
+                                "tooltip": "#Column tooltip",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Show",
+                                "checked": false,
+                                "name": "columns[index][visible]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Sortable",
+                                "checked": true,
+                                "name": "columns[index][sortable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Filterable",
+                                "checked": true,
+                                "name": "columns[index][filterable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Enabled",
+                                "checked": true,
+                                "name": "columns[index][enabled]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Column \"Header\"",
+                        "cls": "rg-references-articles__fieldset-col",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 100,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[header][text]",
+                                "fieldLabel": "#Name",
+                                "tooltip": "#Column name",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[header][tooltip]",
+                                "fieldLabel": "#Tootlip",
+                                "tooltip": "#Column tooltip",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "numberfield",
+                                "name": "columns[header][width]",
+                                "fieldLabel": "#Width",
+                                "tooltip": "#Column width",
+                                "width": 200,
+                                "value": 0,
+                                "minValue": 0
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Show",
+                                "checked": true,
+                                "name": "columns[header][visible]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Sortable",
+                                "checked": true,
+                                "name": "columns[header][sortable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Filterable",
+                                "checked": true,
+                                "name": "columns[header][filterable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Enabled",
+                                "checked": true,
+                                "name": "columns[header][enabled]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Column \"Category\"",
+                        "cls": "rg-references-articles__fieldset-col",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 100,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[categoryName][text]",
+                                "fieldLabel": "#Name",
+                                "tooltip": "#Column name",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[categoryName][tooltip]",
+                                "fieldLabel": "#Tootlip",
+                                "tooltip": "#Column tooltip",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "numberfield",
+                                "name": "columns[categoryName][width]",
+                                "fieldLabel": "#Width",
+                                "tooltip": "#Column width",
+                                "width": 200,
+                                "value": 0,
+                                "minValue": 0
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Show",
+                                "checked": true,
+                                "name": "columns[categoryName][visible]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Sortable",
+                                "checked": true,
+                                "name": "columns[categoryName][sortable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Filterable",
+                                "checked": true,
+                                "name": "columns[categoryName][filterable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Enabled",
+                                "checked": true,
+                                "name": "columns[categoryName][enabled]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Column \"Slug\"",
+                        "cls": "rg-references-articles__fieldset-col",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 100,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[slug][text]",
+                                "fieldLabel": "#Name",
+                                "tooltip": "#Column name",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[slug][tooltip]",
+                                "fieldLabel": "#Tootlip",
+                                "tooltip": "#Column tooltip",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "numberfield",
+                                "name": "columns[slug][width]",
+                                "fieldLabel": "#Width",
+                                "tooltip": "#Column width",
+                                "width": 200,
+                                "value": 0,
+                                "minValue": 0
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Show",
+                                "checked": true,
+                                "name": "columns[slug][visible]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Sortable",
+                                "checked": true,
+                                "name": "columns[slug][sortable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Filterable",
+                                "checked": true,
+                                "name": "columns[slug][filterable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Enabled",
+                                "checked": true,
+                                "name": "columns[slug][enabled]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Column \"Slug type\"",
+                        "cls": "rg-references-articles__fieldset-col",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 100,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[slugType][text]",
+                                "fieldLabel": "#Name",
+                                "tooltip": "#Column name",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[slugType][tooltip]",
+                                "fieldLabel": "#Tootlip",
+                                "tooltip": "#Column tooltip",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "numberfield",
+                                "name": "columns[slugType][width]",
+                                "fieldLabel": "#Width",
+                                "tooltip": "#Column width",
+                                "width": 200,
+                                "value": 0,
+                                "minValue": 0
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Show",
+                                "checked": false,
+                                "name": "columns[slugType][visible]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Sortable",
+                                "checked": true,
+                                "name": "columns[slugType][sortable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Enabled",
+                                "checked": true,
+                                "name": "columns[slugType][enabled]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Column \"Language\"",
+                        "cls": "rg-references-articles__fieldset-col",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 100,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[languageName][text]",
+                                "fieldLabel": "#Name",
+                                "tooltip": "#Column name",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[languageName][tooltip]",
+                                "fieldLabel": "#Tootlip",
+                                "tooltip": "#Column tooltip",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "numberfield",
+                                "name": "columns[languageName][width]",
+                                "fieldLabel": "#Width",
+                                "tooltip": "#Column width",
+                                "width": 200,
+                                "value": 0,
+                                "minValue": 0
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Show",
+                                "checked": false,
+                                "name": "columns[languageName][visible]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Sortable",
+                                "checked": true,
+                                "name": "columns[languageName][sortable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Enabled",
+                                "checked": true,
+                                "name": "columns[languageName][enabled]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Column \"Template\"",
+                        "cls": "rg-references-articles__fieldset-col",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 100,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[template][text]",
+                                "fieldLabel": "#Name",
+                                "tooltip": "#Column name",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[template][tooltip]",
+                                "fieldLabel": "#Tootlip",
+                                "tooltip": "#Column tooltip",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "numberfield",
+                                "name": "columns[template][width]",
+                                "fieldLabel": "#Width",
+                                "tooltip": "#Column width",
+                                "width": 200,
+                                "value": 0,
+                                "minValue": 0
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Show",
+                                "checked": true,
+                                "name": "columns[template][visible]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Sortable",
+                                "checked": true,
+                                "name": "columns[template][sortable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Filterable",
+                                "checked": true,
+                                "name": "columns[template][filterable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Enabled",
+                                "checked": true,
+                                "name": "columns[template][enabled]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Column \"Page template\"",
+                        "cls": "rg-references-articles__fieldset-col",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 100,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[pageTemplate][text]",
+                                "fieldLabel": "#Name",
+                                "tooltip": "#Column name",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[pageTemplate][tooltip]",
+                                "fieldLabel": "#Tootlip",
+                                "tooltip": "#Column tooltip",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "numberfield",
+                                "name": "columns[pageTemplate][width]",
+                                "fieldLabel": "#Width",
+                                "tooltip": "#Column width",
+                                "width": 200,
+                                "value": 0,
+                                "minValue": 0
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Show",
+                                "checked": false,
+                                "name": "columns[pageTemplate][visible]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Sortable",
+                                "checked": true,
+                                "name": "columns[pageTemplate][sortable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Filterable",
+                                "checked": true,
+                                "name": "columns[pageTemplate][filterable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Enabled",
+                                "checked": true,
+                                "name": "columns[pageTemplate][enabled]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Column \"Anchor\"",
+                        "cls": "rg-references-articles__fieldset-col",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 100,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[url][text]",
+                                "fieldLabel": "#Name",
+                                "tooltip": "#Column name",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[url][tooltip]",
+                                "fieldLabel": "#Tootlip",
+                                "tooltip": "#Column tooltip",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Show",
+                                "checked": true,
+                                "name": "columns[url][visible]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Enabled",
+                                "checked": true,
+                                "name": "columns[url][enabled]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Column \"Number of hits\"",
+                        "cls": "rg-references-articles__fieldset-col",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 100,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[hits][text]",
+                                "fieldLabel": "#Name",
+                                "tooltip": "#Column name",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[hits][tooltip]",
+                                "fieldLabel": "#Tootlip",
+                                "tooltip": "#Column tooltip",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Show",
+                                "checked": false,
+                                "name": "columns[hits][visible]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Sortable",
+                                "checked": true,
+                                "name": "columns[hits][sortable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Filterable",
+                                "checked": true,
+                                "name": "columns[hits][filterable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Enabled",
+                                "checked": true,
+                                "name": "columns[hits][enabled]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Column \"Published\"",
+                        "cls": "rg-references-articles__fieldset-col",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 100,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[publish][tooltip]",
+                                "fieldLabel": "#Tootlip",
+                                "tooltip": "#Column tooltip",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Show",
+                                "checked": true,
+                                "name": "columns[publish][visible]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Sortable",
+                                "checked": true,
+                                "name": "columns[publish][sortable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Filterable",
+                                "checked": true,
+                                "name": "columns[publish][filterable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Enabled",
+                                "checked": true,
+                                "name": "columns[publish][enabled]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Column \"Caching\"",
+                        "cls": "rg-references-articles__fieldset-col",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 100,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[caching][tooltip]",
+                                "fieldLabel": "#Tootlip",
+                                "tooltip": "#Column tooltip",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Show",
+                                "checked": false,
+                                "name": "columns[caching][visible]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Sortable",
+                                "checked": true,
+                                "name": "columns[caching][sortable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Filterable",
+                                "checked": true,
+                                "name": "columns[caching][filterable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Enabled",
+                                "checked": true,
+                                "name": "columns[caching][enabled]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Column \"Indexing\"",
+                        "cls": "rg-references-articles__fieldset-col",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 100,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[indexing][text]",
+                                "fieldLabel": "#Name",
+                                "tooltip": "#Column name",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "textfield",
+                                "name": "columns[indexing][tooltip]",
+                                "fieldLabel": "#Tootlip",
+                                "tooltip": "#Column tooltip",
+                                "width": 400,
+                                "maxLength": 255
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Show",
+                                "checked": false,
+                                "name": "columns[indexing][visible]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Sortable",
+                                "checked": true,
+                                "name": "columns[indexing][sortable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Filterable",
+                                "checked": true,
+                                "name": "columns[indexing][filterable]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Enabled",
+                                "checked": true,
+                                "name": "columns[indexing][enabled]",
+                                "inputValue": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "#Form Interface",
+                "iconCls": "g-icon-svg g-icon-svg_size_16 g-icon-m_color_tab rg-references-articles__icon-elements",
+                "bodyPadding": "0",
+                "layout": "anchor",
+                "items": [
+                    {
+                        "xtype": "tabpanel",
+                        "activeTab": 0,
+                        "ui": "flat-light",
+                        "anchor": "100% 100%",
+                        "tabPosition": "left",
+                        "autoRender": true,
+                        "items": [
+                            {
+                                "title": "#Tabs",
+                                "bodyPadding": 10,
+                                "autoScroll": true,
+                                "items": [
+                                    {
+                                        "xtype": "fieldset",
+                                        "cls": "rg-references-articles__fieldset-form",
+                                        "collapsible": true,
+                                        "title": "#Tab \"Attributes\"",
+                                        "defaults": {
+                                            "labelWidth": 100,
+                                            "labelAlign": "right"
+                                        },
+                                        "items": [
+                                            {
+                                                "xtype": "textfield",
+                                                "name": "tabAttributes[title]",
+                                                "fieldLabel": "#Name",
+                                                "tooltip": "#Tab name",
+                                                "width": 400,
+                                                "maxLength": 100
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Show",
+                                                "checked": true,
+                                                "name": "tabAttributes[visible]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "label",
+                                                "ui": "header-line",
+                                                "cls": "rg-references-articles__line",
+                                                "text": "#Tab fields (default)"
+                                            },
+                                            {
+                                                "xtype": "g-field-combobox",
+                                                "fieldLabel": "#Language",
+                                                "tooltip": "#The language (if selected) will be automatically added to the site material",
+                                                "name": "tabAttributes[language]",
+                                                "labelWidth": 170,
+                                                "width": 450,
+                                                "hiddenName": "tabAttributes[language]",
+                                                "store": {
+                                                    "fields": ["id", "name"],
+                                                    "proxy": {
+                                                        "type": "ajax",
+                                                        "url": ["@backend/languages/trigger/combo"],
+                                                        "extraParams": {"combo": "language"},
+                                                        "reader": {
+                                                            "type": "array",
+                                                            "rootProperty": "data"
+                                                        }
+                                                    }
+                                                },
+                                                "displayField": "name",
+                                                "valueField": "id",
+                                                "editable": false,
+                                                "allowBlank": true
+                                            },
+                                            "@articleTemplates",
+                                            "@pageTemplates",
+                                            {
+                                                "xtype": "combobox",
+                                                "fieldLabel": "#Slug type",
+                                                "tooltip": "#The site content URL display view (if selected) will be automatically added to the site content and will be hidden when the content form is displayed",
+                                                "name": "tabAttributes[slugType]",
+                                                "value": 0,
+                                                "store": {
+                                                    "fields": ["value", "type"],
+                                                    "data": [
+                                                        ["0", "#[None]"], ["1", "#Static"], ["2", "#Dynamic"], ["3", "#Main"]
+                                                    ]
+                                                },
+                                                "displayField": "type",
+                                                "valueField": "value",
+                                                "queryMode": "local",
+                                                "editable": false,
+                                                "labelWidth": 170,
+                                                "width": 450
+                                            },
+                                            {
+                                                "xtype": "g-field-combobox",
+                                                "fieldLabel": "#Category",
+                                                "tooltip": "#The category (section) of the site material (if selected) will be automatically added to the site material and will be hidden when the material form is displayed",
+                                                "name": "tabAttributes[category]",
+                                                "labelWidth": 170,
+                                                "width": "100%",
+                                                "maxWidth": 800,
+                                                "hiddenName": "tabAttributes[category]",
+                                                "store": {
+                                                    "fields": ["id", "name"],
+                                                    "proxy": {
+                                                        "type": "ajax",
+                                                        "url": ["@backend/articles/trigger/combo"],
+                                                        "extraParams": {"combo": "category"},
+                                                        "reader": {
+                                                            "type": "array",
+                                                            "rootProperty": "data"
+                                                        }
+                                                    }
+                                                },
+                                                "pageSize": 25,
+                                                "displayField": "name",
+                                                "valueField": "id",
+                                                "minChars": 3,
+                                                "queryParam": "q",
+                                                "queryMode": "remote",
+                                                "editable": true,
+                                                "allowBlank": true
+                                            },
+                                            {
+                                                "xtype": "label",
+                                                "ui": "header-line",
+                                                "cls": "rg-references-articles__line",
+                                                "text": "#Tab fields (show)"
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#URL path (slug)",
+                                                "checked": true,
+                                                "labelWidth": 170,
+                                                "name": "tabAttributes[urlPathEnabled]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Image",
+                                                "checked": true,
+                                                "labelWidth": 170,
+                                                "name": "tabAttributes[imageEnabled]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Publication date",
+                                                "checked": true,
+                                                "labelWidth": 170,
+                                                "name": "tabAttributes[publishDateEnabled]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "label",
+                                                "ui": "header-line",
+                                                "cls": "rg-references-articles__line",
+                                                "text": "#Show option to select publish flags"
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "fieldLabel": "#on the main page of the site",
+                                                "name": "tabAttributes[publishOnMain]",
+                                                "inputValue": 1,
+                                                "labelWidth": 170,
+                                                "checked": true,
+                                                "ui": "switch"
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "fieldLabel": "#in site sections",
+                                                "name": "tabAttributes[publishInCategories]",
+                                                "inputValue": 1,
+                                                "labelWidth": 170,
+                                                "checked": true,
+                                                "ui": "switch"
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "fieldLabel": "#on the site",
+                                                "name": "tabAttributes[publish]",
+                                                "inputValue": 1,
+                                                "labelWidth": 170,
+                                                "checked": true,
+                                                "ui": "switch"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "xtype": "fieldset",
+                                        "cls": "rg-references-articles__fieldset-form",
+                                        "collapsible": true,
+                                        "title": "#Tab \"Announce\"",
+                                        "defaults": {
+                                            "labelWidth": 100,
+                                            "labelAlign": "right"
+                                        },
+                                        "items": [
+                                            {
+                                                "xtype": "textfield",
+                                                "name": "tabAnnounce[title]",
+                                                "fieldLabel": "#Name",
+                                                "tooltip": "#Tab name",
+                                                "width": 400,
+                                                "maxLength": 100
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Show",
+                                                "checked": true,
+                                                "name": "tabAnnounce[visible]",
+                                                "inputValue": 1
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "xtype": "fieldset",
+                                        "cls": "rg-references-articles__fieldset-form",
+                                        "collapsible": true,
+                                        "title": "#Tab \"Text\"",
+                                        "defaults": {
+                                            "labelWidth": 100,
+                                            "labelAlign": "right"
+                                        },
+                                        "items": [
+                                            {
+                                                "xtype": "textfield",
+                                                "name": "tabText[title]",
+                                                "fieldLabel": "#Name",
+                                                "tooltip": "#Tab name",
+                                                "width": 400,
+                                                "maxLength": 100
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Show",
+                                                "checked": true,
+                                                "name": "tabText[visible]",
+                                                "inputValue": 1
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "xtype": "fieldset",
+                                        "cls": "rg-references-articles__fieldset-form",
+                                        "collapsible": true,
+                                        "title": "#Tab \"SEO\"",
+                                        "defaults": {
+                                            "labelWidth": 100,
+                                            "labelAlign": "right"
+                                        },
+                                        "items": [
+                                            {
+                                                "xtype": "textfield",
+                                                "name": "tabSeo[title]",
+                                                "fieldLabel": "#Name",
+                                                "tooltip": "#Tab name",
+                                                "width": 400,
+                                                "maxLength": 100
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Show",
+                                                "checked": true,
+                                                "name": "tabSeo[visible]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "label",
+                                                "ui": "header-line",
+                                                "cls": "rg-references-articles__line",
+                                                "text": "#Tab fields (show)"
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Section \"Article metatag\"",
+                                                "labelWidth": 240,
+                                                "checked": true,
+                                                "name": "tabSeo[metatagEnabled]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Section \"Sitemap\"",
+                                                "labelWidth": 240,
+                                                "checked": true,
+                                                "name": "tabSeo[sitemapEnabled]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Section \"Feed\"",
+                                                "labelWidth": 240,
+                                                "checked": true,
+                                                "name": "tabSeo[feedEnabled]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Section \"Indexing directives\"",
+                                                "labelWidth": 240,
+                                                "checked": true,
+                                                "name": "tabSeo[indexingEnabled]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Section \"Special directives\"",
+                                                "labelWidth": 240,
+                                                "checked": true,
+                                                "name": "tabSeo[directivesEnabled]",
+                                                "inputValue": 1
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "xtype": "fieldset",
+                                        "cls": "rg-references-articles__fieldset-form",
+                                        "collapsible": true,
+                                        "title": "#Tab \"Additionally\"",
+                                        "defaults": {
+                                            "labelWidth": 100,
+                                            "labelAlign": "right"
+                                        },
+                                        "items": [
+                                            {
+                                                "xtype": "textfield",
+                                                "name": "tabAdditionally[title]",
+                                                "fieldLabel": "#Name",
+                                                "tooltip": "#Tab name",
+                                                "width": 400,
+                                                "maxLength": 100
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Show",
+                                                "checked": true,
+                                                "name": "tabAdditionally[visible]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "label",
+                                                "ui": "header-line",
+                                                "cls": "rg-references-articles__line",
+                                                "text": "#Tab fields (default)"
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Checkbox \"Search\"",
+                                                "labelWidth": 190,
+                                                "checked": true,
+                                                "name": "tabAdditionally[fldInSearchCheck]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Checkbox \"Sitemap\"",
+                                                "labelWidth": 190,
+                                                "checked": true,
+                                                "name": "tabAdditionally[fldInSitemapCheck]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Checkbox \"Caching\"",
+                                                "labelWidth": 190,
+                                                "name": "tabAdditionally[fldCachingCheck]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "label",
+                                                "ui": "header-line",
+                                                "cls": "rg-references-articles__line",
+                                                "text": "#Tab fields (show)"
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Field \"Index\"",
+                                                "labelWidth": 190,
+                                                "checked": true,
+                                                "name": "tabAdditionally[fldIndexShow]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Field \"Number of hits\"",
+                                                "labelWidth": 190,
+                                                "checked": true,
+                                                "name": "tabAdditionally[fldHitsShow]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Field \"Tags\"",
+                                                "labelWidth": 190,
+                                                "checked": true,
+                                                "name": "tabAdditionally[fldTagsShow]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Checkbox \"Search\"",
+                                                "labelWidth": 190,
+                                                "checked": true,
+                                                "name": "tabAdditionally[fldInSearchShow]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Checkbox \"Sitemap\"",
+                                                "labelWidth": 190,
+                                                "checked": true,
+                                                "name": "tabAdditionally[fldInSitemapShow]",
+                                                "inputValue": 1
+                                            },
+                                            {
+                                                "xtype": "checkbox",
+                                                "ui": "switch",
+                                                "fieldLabel": "#Checkbox \"Caching\"",
+                                                "labelWidth": 190,
+                                                "checked": true,
+                                                "name": "tabAdditionally[fldCachingShow]",
+                                                "inputValue": 1
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "#Form elements",
+                                "tooltip": "Material type form elements",
+                                "bodyPadding": "0",
+                                "autoScroll": false,
+                                "controller": "rg-be-references-articles-elements",
+                                "layout": {
+                                    "type": "hbox",
+                                    "align": "stretch"
+                                },
+                                "items": [
+                                    {
+                                        "xtype": "rg-be-references-articles-efield",
+                                        "name": "elements",
+                                        "treeId": "rg-references-articles__elements"
+                                    },
+                                    {
+                                        "xtype": "rg-be-references-articles-ffield",
+                                        "name": "fields",
+                                        "treeId": "rg-references-articles__elements"
+                                    },
+                                    {
+                                        "xtype": "rg-be-references-articles-cfield",
+                                        "name": "components",
+                                        "treeId": "rg-references-articles__elements"
+                                    },
+                                    {
+                                        "bodyStyle": "background:#ffffff",
+                                        "id": "rg-references-articles__elements",
+                                        "xtype": "treepanel",
+                                        "flex": 2,
+                                        "lines": false,
+                                        "useArrows": true,
+                                        "tbar": {
+                                            "padding": 1,
+                                            "height": 30,
+                                            "defaults": {
+                                                "ui": "form-tool",
+                                                "margin": "0 1 0 1",
+                                                "height": 28
+                                            },
+                                            "items": [
+                                                {
+                                                    "xtype": "splitbutton",
+                                                    "tooltip": "#Add interface element",
+                                                    "iconCls": "g-icon-svg g-icon-m_add g-icon-m_color_base g-icon-m_is-hover",
+                                                    "handler": "onAddElement",
+                                                    "window": {
+                                                        "xtype": "window",
+                                                        "iconCls": "g-icon-svg g-icon-svg_size_16 rg-references-articles__icon-elements",
+                                                        "controller": "rg-be-references-articles-elements",
+                                                        "title": "#Adding an interface element",
+                                                        "close": "hide",
+                                                        "width": 500,
+                                                        "autoHeight": true,
+                                                        "modal": true,
+                                                        "items": [{
+                                                            "xtype": "form",
+                                                            "bodyPadding": 10,
+                                                            "defaults": {
+                                                                "labelWidth": 150,
+                                                                "labelAlign": "right",
+                                                                "anchor": "100%",
+                                                                "allowBlank": false
+                                                            },
+                                                            "items": [
+                                                                {
+                                                                    "xtype": "textfield",
+                                                                    "name": "elementName",
+                                                                    "fieldLabel": "#Name"
+                                                                },
+                                                                {
+                                                                    "xtype": "g-field-combobox",
+                                                                    "fieldLabel": "#Interface element",
+                                                                    "name": "elementCombo",
+                                                                    "hiddenName": "elementCombo",
+                                                                    "store": {
+                                                                        "fields": ["id", "name", "icon", "properties", "type", "isField"],
+                                                                        "proxy": {
+                                                                            "type": "ajax",
+                                                                            "url": ["@backend/references/elements/trigger/combo"],
+                                                                            "extraParams": {"combo": "elements", "noneRow": 0},
+                                                                            "reader": {"type": "array", "rootProperty": "data"}
+                                                                        }
+                                                                    },
+                                                                    "listConfig": {
+                                                                        "itemTpl": ["<div data-qtip=\"{name}\"><img src=\"{icon}\" align=\"absmiddle\"> {name}</div>"]
+                
+                                                                    },
+                                                                    "displayField": "name",
+                                                                    "valueField": "id",
+                                                                    "editable": false
+                                                                }
+                                                            ],
+                                                            "buttons": [
+                                                                {
+                                                                    "xtype": "button",
+                                                                    "iconCls": "g-icon-svg g-icon_size_14 g-icon-m_add",
+                                                                    "ui": "form",
+                                                                    "text": "#Add",
+                                                                    "handler": "onBtnAddElement"
+                                                                },
+                                                                {
+                                                                    "xtype": "button",
+                                                                    "ui": "form-close",
+                                                                    "text": "#Cancel",
+                                                                    "handler": "onBtnCloseWindow"
+                                                                }
+                                                            ]
+                                                        }]
+                                                    },
+                                                    "menu": {
+                                                        "items": [
+                                                            {
+                                                                "text": "#Add",
+                                                                "handler": "onAddElement"
+                                                            },
+                                                            {
+                                                                "text": "#Add to selected element",
+                                                                "msgMustSelect": "#You need to select a element",
+                                                                "handler": "onAddElementTo"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "xtype": "button",
+                                                    "tooltip": "#Remove selected item",
+                                                    "iconCls": "g-icon-svg g-icon-svg_size_16 g-icon_cut",
+                                                    "msgMustSelect": "#You need to select a element",
+                                                    "handler": "onBtnRemoveElement"
+                                                },
+                                                {
+                                                    "xtype": "button",
+                                                    "tooltip": "#Remove all items",
+                                                    "iconCls": "g-icon-svg g-icon-svg_size_16 g-icon_cleanup",
+                                                    "handler": "onBtnRemoveElements"
+                                                }
+                                            ]
+                                        },
+                                        "rootVisible": false,
+                                        "root": {
+                                            "expanded": true,
+                                            "children": []
+                                        },
+                                        "listeners": {
+                                            "select": "onSelectNode"
+                                        }
+                                    },
+                                    {
+                                        "xtype": "tabpanel",
+                                        "ui": "flat-light",
+                                        "activeTab": 0,
+                                        "width": 400,
+                                        "split": true,
+                                        "autoRender": true,
+                                        "items": [
+                                            {
+                                                "title": "#Properties",
+                                                "iconCls": "g-icon-svg g-icon-svg_size_16 g-icon-m_color_tab rg-references-articles__icon-properties",
+                                                "layout": "anchor",
+                                                "tbar": {
+                                                    "padding": 1,
+                                                    "height": 30,
+                                                    "defaults": {
+                                                        "ui": "form-tool",
+                                                        "margin": "0 1 0 1",
+                                                        "height": 28
+                                                    },        
+                                                    "items": [
+                                                        {
+                                                            "xtype": "button",
+                                                            "tooltip": "#Adding an element property",
+                                                            "iconCls": "g-icon-svg g-icon-m_add g-icon-m_color_base g-icon-m_is-hover",
+                                                            "msgMustSelectElement": "#You need to select a element",
+                                                            "handler": "onAddProperty",
+                                                            "window": {
+                                                                "xtype": "window",
+                                                                "iconCls": "g-icon-svg g-icon-svg_size_16 rg-references-articles__icon-properties",
+                                                                "controller": "rg-be-references-articles-elements",
+                                                                "title": "#Adding an element property",
+                                                                "close": "hide",
+                                                                "width": 500,
+                                                                "ghost": false,
+                                                                "autoHeight": true,
+                                                                "modal": true,
+                                                                "items": [{
+                                                                    "xtype": "form",
+                                                                    "bodyPadding": 10,
+                                                                    "defaults": {
+                                                                        "labelWidth": 150,
+                                                                        "labelAlign": "right",
+                                                                        "anchor": "100%",
+                                                                        "allowBlank": false
+                                                                    },
+                                                                    "items": [
+                                                                        {
+                                                                            "xtype": "textfield",
+                                                                            "name": "propertyName",
+                                                                            "fieldLabel": "#Name"
+                                                                        },
+                                                                        {
+                                                                            "xtype": "textfield",
+                                                                            "name": "propertyValue",
+                                                                            "fieldLabel": "#Value"
+                                                                        }
+                                                                    ],
+                                                                    "buttons": [
+                                                                        {
+                                                                            "xtype": "button",
+                                                                            "iconCls": "g-icon-svg g-icon_size_14 g-icon-m_add",
+                                                                            "ui": "form",
+                                                                            "text": "#Add",
+                                                                            "handler": "onBtnAddProperty"
+                                                                        },
+                                                                        {
+                                                                            "xtype": "button",
+                                                                            "ui": "form-close",
+                                                                            "text": "#Cancel",
+                                                                            "handler": "onBtnCloseWindow"
+                                                                        }
+                                                                    ]
+                                                                }]
+                                                            }
+                                                        },
+                                                        {
+                                                            "xtype": "button",
+                                                            "tooltip": "#Remove selected property",
+                                                            "iconCls": "g-icon-svg g-icon-svg_size_16 g-icon_cut",
+                                                            "msgMustSelect": "#You need to select a property",
+                                                            "msgRemoveError": "#The selected property cannot be deleted",
+                                                            "handler": "onBtnRemoveProperty"
+                                                        },
+                                                        {
+                                                            "xtype": "button",
+                                                            "tooltip": "#Give properties names",
+                                                            "iconCls": "g-icon-svg g-icon-svg_size_16 rg-references-articles__icon-translate",
+                                                            "enableToggle": true,
+                                                            "listeners": {
+                                                                "toggle": "onBtnToggleProperties"
+                                                            }
+                                                        },
+                                                        {
+                                                            "xtype": "button",
+                                                            "tooltip": "#Remove all properties",
+                                                            "iconCls": "g-icon-svg g-icon-svg_size_16 g-icon_cleanup",
+                                                            "handler": "onBtnRemoveProperties"
+                                                        }
+                                                    ]
+                                                },
+                                                "items": {
+                                                    "id": "rg-references-articles__properties",
+                                                    "xtype": "g-propertygrid",
+                                                    "anchor": "100% 100%",
+                                                    "nameColumnWidth": 200,
+                                                    "style": "border:1px solid #ededed",
+                                                    "source": {},
+                                                    "sourceConfig": "@sourceConfig",
+                                                    "listeners": {
+                                                        "propertychange": "onPropertyChange"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
