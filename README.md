@@ -16,7 +16,7 @@
 
 Типы материалов (статей) на сайте задают набор полей и определяют шаблоны отображения информации о материале на веб‑странице.
 
-Справочник входит в состав Панели управления GePanel и cлужит расширением для [модуля «Справочники»](https://github.com/rosgear/rg-be-references).
+Справочник входит в состав Панели управления GePanel и cлужит расширением для [модуля «Справочники»](https://github.com/rosgear/rg-be-reference).
 
 ### Скриншот
 <img src="https://github.com/rosgear/rg-be-references-articles/blob/main/assets/help/grid.png?raw=true">
@@ -44,7 +44,7 @@ $ composer require rosgear/rg-be-references-articles
 
 The types of materials (articles) on a website define a set of fields and determine the templates for displaying information about the material on a web page.
 
-The reference is part of the GePanel Control Panel and serves as an extension for the [«References» module](https://github.com/rosgear/rg-be-references).
+The reference is part of the GePanel Control Panel and serves as an extension for the [«References» module](https://github.com/rosgear/rg-be-reference).
 
 ### Screenshot
 <img src="https://github.com/rosgear/rg-be-references-articles/blob/main/assets/help/grid.png?raw=true">
