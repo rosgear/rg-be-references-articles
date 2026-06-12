@@ -114,8 +114,8 @@ class Form extends FormController
             ->setNamespaceJS('Rg.be.references.articles')
             ->addRequire('Ge.view.form.field.Field')
             ->addRequire('Ge.view.grid.property.Grid')
-            ->addRequire('Rg.be.references.articles.Fields')
-            ->addRequire('Rg.be.references.articles.ElementsController');
+            ->addRequire('Rg.be.references.articles.Fields' . (GE_DEBUG ? '-debug' : ''))
+            ->addRequire('Rg.be.references.articles.ElementsController' . (GE_DEBUG ? '-debug' : ''));
         return $window;
     }
 }
