@@ -15,20 +15,53 @@
     <div class="g-help-screen g-help-screen--hidable">
         <img src="<?= $assetsUrl, '/help/form.png' ?>" />
     </div>
-    <p>The form appears after clicking the <b>"Add"</b> button on the list toolbar or selecting the <b>"Edit"</b> item from the context menu of the selected article record.</p>
+    <p>The form appears after clicking the <b>"Add"</b> button on <a href="<?= $url('grid') ?>">the list</a> toolbar or selecting the <b>"Edit"</b> item from the context menu of the selected article record.</p>
     <h2>Form tabs</h2>
     <h3>Form tab "Attributes"</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua and has the following fields:</p>
+    <p>General settings for a content type are defined by the following fields:</p>
     <ul class="g-help-list">
-        <li><b>Name.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Description.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Icon.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Enabled.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+        <li><b>Name.</b> The name of the content type;</li>
+        <li><b>Description.</b> A description of the content type;</li>
+        <li><b>Icon.</b> Specify the URL for the content type icon, which will be displayed on the <a href="<?= $url('desk', 'module:rg.be.articles') ?>">Site Content Dashboard</a>. Image requirements: minimum resolution of 32x32 pixels; supported formats are PNG, SVG, or JPG (SVG or PNG with a transparent background are recommended);</li>
+        <li><b>All content.</b> If this checkbox is selected, all content items will be displayed in the list, regardless of their type.</li>
+        <li><b>Available.</b> If this checkbox is selected, the content type is included in the list of available types.</li>
     </ul>
 
     <h3>Form tabы "List Interface"</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p> 
+    <p>This tab allows you to configure which columns are displayed in the content item table. The list of available columns includes:</p>
+    <ul>
+        <li><b>Publication Date.</b> The publication date of an item is specified via the "Date" and "Time" fields. The display format for the publication date in the list is defined in the <a href="<?= $url('index', 'extension:rg.be.config.datetime') ?>">"Date and Time" configuration</a>.</li>
+        <li><b>Sequence Number.</b> The sequence number acts as a sorting parameter and is used to display content items in a specific order within lists.</li>
+        <li><b>Title.</b> The title of a content item appears at the top of the page as the primary heading for that section. It serves as a key identifier for the content and is displayed in a large font at the top of the content area.</li>
+        <li><b>Category (Section).</b> The category (or section) of a content item defines its thematic classification and establishes the site's hierarchical structure. It is used for navigation, filtering, and grouping content, and also influences the generation of URLs. Assigning a category is mandatory when publishing an item; it serves as the basis for rules governing how content is displayed and accessed. Categories are managed via the <a href="<?= $url('index', 'module:rg.be.article_categories') ?>">"Website Content Categories" directory</a>.</li>
+        <li><b>Slug.</b> A slug is a unique part of a URL, derived from a name. It consists exclusively of lowercase Latin letters, numbers, and hyphens, with no spaces or special characters.</li>
+        <li><b>Slug format.</b> The slug format defines the rules for generating the URL of a piece of content; it can take the following forms:
+            <ul>
+                <li><b>Static.</b> When the static slug type is selected, the system generates a URL based on the content item's title. The resulting slug consists exclusively of lowercase Latin letters, numbers, and hyphens. Spaces and special characters are automatically replaced or removed.</li>
+                <li><b>Dynamic.</b> When the dynamic slug type is selected, the system generates a URL based on the content item's title, but appends or prepends the item's unique identifier to the URL. The resulting slug consists exclusively of lowercase Latin letters, numbers, and hyphens. Spaces and special characters are automatically replaced or removed.</li>
+                <li><b>Primary.</b> The primary slug type is used to designate a content item as the main page for the category to which it belongs. In this case, the URL is not set manually; it is automatically generated based on the slug of the category to which the item is assigned.</li>
+            </ul>
+        </li>
+        <li><b>Language.</b> The language in which the content is published.</li>
+        <li><b>Template.</b> The name of the content template—a layout that defines how the content is displayed on the page.</li>
+        <li><b>Page Template.</b> The name of the page template—a page layout that determines where the content appears on the page.</li>
+        <li><b>Page Link.</b> The URL of the page where the content is located.</li>
+        <li><b>Visit Count.</b> A counter for visits to the content page—a metric that tracks the number of times users view the page. It helps monitor the popularity of the content and analyze traffic trends.</li>
+        <li><b>Published.</b> When this flag is set, the content is considered published and becomes accessible to users via its corresponding URL.</li>
+        <li><b>Content Caching.</b> When this flag is set, the page containing the published content is cached.</li>
+        <li><b>Indexing.</b> A directive for indexing a page containing published material. It defines the rules for how search engine bots should process the page. Permitted values:
+            <ul>
+                <li><code>all</code> — fully accessible for indexing and following links;</li>
+                <li><code>none</code> — indexing and following links are prohibited;</li>
+                <li><code>index, follow</code> — allow indexing and following links;</li>
+                <li><code>index, nofollow</code> — allow indexing, but prohibit following links;</li>
+                <li><code>noindex, nofollow</code> — do not index and do not follow links;</li>
+                <li><code>noindex</code> — do not index, but allow following links;</li>
+                <li><code>nofollow</code> — allow indexing, but prohibit following links.</li>
+            </ul>
+        </li>
+    </ul>
 
     <h3>Form tabы "Form Interface"</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+    <p>This tab is designed for configuring the settings for fields in the content editing form. The form fields are organized into tabs: "Attributes," "Teaser," "Text," "SEO," and "Additional." This grouping ensures convenient navigation and a logical separation of settings based on their purpose.</p>
 </article>
