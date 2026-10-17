@@ -12,8 +12,8 @@
 return [
     'name'        => 'Types of materials',
     'description' => 'Types of site articles with appropriate presentation of information',
-    'version'     => '1.0',
-    'versionDate' => '20-12-2017',
+    'version'     => '1.0.1',
+    'versionDate' => '14-10-2026',
     'author'      => 'RosGear',
     'authorUrl'   => 'https://rosgear.ru/',
     'email'       => 'info@rosgear.ru',
